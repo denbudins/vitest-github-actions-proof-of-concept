@@ -30,6 +30,6 @@ jobs:
         uses: dorny/test-reporter@v2
         with:
           name: Vitest Results
-          path: "**/test-results.xml"
+          path: "**/test-results.json"
           reporter: vitest
           fail-on-error: false

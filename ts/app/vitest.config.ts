@@ -10,5 +10,7 @@ export default defineConfig({
       reportOnFailure: true,
       reportsDirectory: path.resolve(__dirname, "../../coverage/app"),
     },
+    include: ["./**/*.unit.test.{ts,tsx,js}", "**/*.unit.test.{ts,tsx,js}"],
+    exclude: ["**/node_modules/**", "**/dist/**"],
   },
 });

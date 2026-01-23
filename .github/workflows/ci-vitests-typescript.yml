@@ -25,11 +25,11 @@ jobs:
       - name: Coverage Report
         run: pnpm run coverage
 
-      - name: Publish Test Results
+      - name: Publish Vitest Results
         if: always()
         uses: dorny/test-reporter@v2
         with:
-          name: Vitest Tests
-          path: "./*.trx"
-          reporter: dotnet-trx
+          name: Vitest Results
+          path: "**/test-results.xml"
+          reporter: jest-junit
           fail-on-error: false

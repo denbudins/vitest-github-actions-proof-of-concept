@@ -23,11 +23,5 @@ jobs:
       - name: Build
         run: pnpm run build
 
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Common setup
-        uses: ./.github/actions/ts-common
-
       - name: Unit Tests
         run: pnpm run test:unit

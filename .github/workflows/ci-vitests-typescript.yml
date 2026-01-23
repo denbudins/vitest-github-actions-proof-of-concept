@@ -31,5 +31,5 @@ jobs:
         with:
           name: Vitest Results
           path: "**/test-results.xml"
-          reporter: jest-junit
+          reporter: vitest
           fail-on-error: false

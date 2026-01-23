@@ -20,6 +20,9 @@ jobs:
         run: pnpm install
 
       - name: Unit Tests
+        run: pnpm run test
+
+      - name: Generate Vitest JUnit Report
         run: pnpm run coverage
 
       - name: Publish Vitest Results

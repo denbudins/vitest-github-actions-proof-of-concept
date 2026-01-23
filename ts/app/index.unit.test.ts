@@ -7,4 +7,10 @@ describe("Div", () => {
     const sum = divTwoNumbers(6, 3);
     expect(sum).toBe(result);
   });
+
+  it("should throw an error when dividing by zero", () => {
+    expect(() => divTwoNumbers(6, 0)).toThrow(
+      "Division by zero is not allowed.",
+    );
+  });
 });

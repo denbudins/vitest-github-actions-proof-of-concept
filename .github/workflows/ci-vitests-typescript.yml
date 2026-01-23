@@ -19,11 +19,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Unit Tests
-        run: pnpm run test
-
       - name: Generate Vitest JUnit Report
         run: pnpm run coverage
+
+      - name: Unit Tests
+        run: pnpm run test
 
       - name: Publish Vitest Results
         if: always()

@@ -20,9 +20,6 @@ jobs:
         run: pnpm install
 
       - name: Unit Tests
-        run: pnpm run test
-
-      - name: Coverage Report
         run: pnpm run coverage
 
       - name: Publish Vitest Results

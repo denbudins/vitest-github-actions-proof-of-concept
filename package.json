@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest run --passWithNoTests",
-    "coverage": "               npm-run-all coverage:*",
-    "coverage:client-core": "   (cd ts/app && pnpm run coverage)",
-    "coverage:client-angular": "(cd ts/packages && pnpm run coverage)"
+    "coverage": "vitest run --reporter=junit --outputFile=./test-results.xml"
   },
   "keywords": [],
   "author": "",

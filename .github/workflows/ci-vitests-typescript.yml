@@ -29,8 +29,11 @@ jobs:
       - name: Coverage Report
         run: pnpm run coverage
 
-      - name: "Report Coverage"
+      - name: Publish Vitest Results
         if: always()
-        uses: davelosert/vitest-coverage-report-action@v2
+        uses: dorny/test-reporter@v2
         with:
-          threshold-icons: "{0: '🔴', 80: '🟠', 90: '🟢'}"
+          name: Vitest Results
+          path: "**/test-results.xml"
+          reporter: jest-junit
+          fail-on-error: false

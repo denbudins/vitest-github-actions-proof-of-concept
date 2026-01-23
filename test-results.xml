@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="3" failures="0" errors="0" time="0.0042608">
+    <testsuite name="ts/app/index.unit.test.ts" timestamp="2026-01-23T13:37:24.554Z" hostname="Denis" tests="2" failures="0" errors="0" skipped="0" time="0.0024819">
+        <testcase classname="ts/app/index.unit.test.ts" name="Div &gt; should divide two numbers correctly" time="0.0008647">
+        </testcase>
+        <testcase classname="ts/app/index.unit.test.ts" name="Div &gt; should throw an error when dividing by zero" time="0.0006549">
+        </testcase>
+    </testsuite>
+    <testsuite name="ts/packages/index.unit.test.ts" timestamp="2026-01-23T13:37:24.556Z" hostname="Denis" tests="1" failures="0" errors="0" skipped="0" time="0.0017789">
+        <testcase classname="ts/packages/index.unit.test.ts" name="Sum &gt; should sum two numbers correctly" time="0.0008496">
+        </testcase>
+    </testsuite>
+</testsuites>

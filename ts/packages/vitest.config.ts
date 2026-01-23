@@ -1,51 +1,20 @@
-import path from "path";
 import { defineConfig } from "vitest/config";
+import path from "path";
 
 export default defineConfig({
   test: {
     coverage: {
+      enabled: true,
+      provider: "v8",
       reporter: ["text", "json-summary", "json"],
       reportOnFailure: true,
+      reportsDirectory: path.resolve(__dirname, "../../coverage"),
+      thresholds: {
+        lines: 60,
+        branches: 60,
+        functions: 60,
+        statements: 60,
+      },
     },
-    projects: [
-      {
-        test: {
-          name: "unit",
-          environment: "jsdom",
-          testTimeout: 60000,
-          include: [
-            "./**/*.unit.test.{ts,tsx,js}",
-            "./**/*.unit.test.{ts,tsx,js}",
-          ],
-          exclude: ["**/node_modules/**", "**/dist/**"],
-        },
-      },
-      {
-        test: {
-          name: "integration",
-          environment: "jsdom",
-          testTimeout: 60000,
-          globalSetup: [
-            path.resolve(__dirname, "../../vitest-setup-integration.ts"),
-          ],
-          include: [
-            "./**/*.integration.test.{ts,tsx,js}",
-            "./**/*.integration.test.{ts,tsx,js}",
-          ],
-          exclude: ["**/node_modules/**", "**/dist/**"],
-        },
-      },
-      {
-        test: {
-          name: "debug",
-          testTimeout: 60000,
-          globalSetup: [
-            path.resolve(__dirname, "../../vitest-setup-integration.ts"),
-          ],
-          include: ["./**/*.{test,spec,debug}.{js,ts}"],
-          exclude: ["**/node_modules/**", "**/dist/**"],
-        },
-      },
-    ],
   },
 });

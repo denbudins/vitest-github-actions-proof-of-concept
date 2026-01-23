@@ -1,0 +1,33 @@
+name: Tests TypeScript
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  TypeScript-Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Common setup
+        uses: ./.github/actions/ts-common
+
+      - name: Unit Tests
+        run: pnpm run test:unit

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest run --passWithNoTests",
-    "coverage": "vitest run --passWithNoTests --merge-reports=reports --reporter=github-actions --reporter=junit --outputFile=./test-results.xml"
+    "coverage": "vitest run --passWithNoTests --merge-reports=reports --reporter=junit --reporter=dafult --outputFile=./test-results.xml"
   },
   "keywords": [],
   "author": "",

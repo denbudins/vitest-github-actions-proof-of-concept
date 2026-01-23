@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest run --passWithNoTests",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest --coverage.enabled true"
   },
   "keywords": [],
   "author": "",

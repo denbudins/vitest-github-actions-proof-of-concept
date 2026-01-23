@@ -23,3 +23,7 @@ jobs:
 
       - name: Coverage Report
         run: pnpm run coverage
+
+      - name: "Report Coverage"
+        if: always()
+        uses: davelosert/vitest-coverage-report-action@v2

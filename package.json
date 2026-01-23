@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest run --passWithNoTests",
-    "coverage": "vitest run --passWithNoTests --reporter=junit --coverage-report-on-failure --outputFile=./test-results.xml"
+    "coverage": "vitest run --passWithNoTests --reporter=junit --outputFile=./test-results.xml"
   },
   "keywords": [],
   "author": "",

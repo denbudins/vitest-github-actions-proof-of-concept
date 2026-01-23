@@ -23,6 +23,7 @@ jobs:
         run: pnpm run test
 
       - name: Coverage Report
+        if: always()
         run: pnpm run coverage
 
       - name: Publish Vitest Results

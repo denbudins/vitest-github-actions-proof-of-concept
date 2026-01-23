@@ -21,6 +21,7 @@ jobs:
 
       - name: Generate Vitest JUnit Report
         run: pnpm run coverage
+        continue-on-error: true
 
       - name: Unit Tests
         run: pnpm run test

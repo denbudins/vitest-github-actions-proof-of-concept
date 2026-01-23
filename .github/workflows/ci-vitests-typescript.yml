@@ -20,7 +20,7 @@ jobs:
         run: pnpm install
 
       - name: Unit Tests
-        run: pnpm run test
+        run: pnpm run coverage
 
       - name: Publish Vitest Results
         if: always()

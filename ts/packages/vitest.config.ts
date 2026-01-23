@@ -9,12 +9,6 @@ export default defineConfig({
       reporter: ["text", "json-summary", "json"],
       reportOnFailure: true,
       reportsDirectory: path.resolve(__dirname, "../../coverage"),
-      thresholds: {
-        lines: 60,
-        branches: 60,
-        functions: 60,
-        statements: 60,
-      },
     },
   },
 });

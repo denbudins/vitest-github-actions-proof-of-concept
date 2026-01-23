@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="3" failures="1" errors="0" time="0.0156373">
+    <testsuite name="ts/app/index.unit.test.ts" timestamp="2026-01-23T16:27:26.559Z" hostname="Denis" tests="2" failures="1" errors="0" skipped="0" time="0.0131287">
+        <testcase classname="ts/app/index.unit.test.ts" name="Div &gt; should divide two numbers correctly" time="0.0099567">
+            <failure message="expected 2 to be 3 // Object.is equality" type="AssertionError">
+AssertionError: expected 2 to be 3 // Object.is equality
+
+- Expected
++ Received
+
+- 3
++ 2
+
+ ❯ ts/app/index.unit.test.ts:8:17
+            </failure>
+        </testcase>
+        <testcase classname="ts/app/index.unit.test.ts" name="Div &gt; should throw an error when dividing by zero" time="0.0012908">
+        </testcase>
+    </testsuite>
+    <testsuite name="ts/packages/index.unit.test.ts" timestamp="2026-01-23T16:27:26.563Z" hostname="Denis" tests="1" failures="0" errors="0" skipped="0" time="0.0025086">
+        <testcase classname="ts/packages/index.unit.test.ts" name="Sum &gt; should sum two numbers correctly" time="0.0012122">
+        </testcase>
+    </testsuite>
+</testsuites>

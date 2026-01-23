@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest run --passWithNoTests",
-    "coverage": "vitest run --reporter=junit --outputFile=./test-results.xml"
+    "coverage": "vitest run --reporter=vitest-trx-results-processor --outputFile=./test-results.trx"
   },
   "keywords": [],
   "author": "",
@@ -19,9 +19,11 @@
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
+    "mkdirp": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.8.1",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.18"
+    "vitest": "^4.0.18",
+    "vitest-trx-results-processor": "^1.0.3"
   }
 }

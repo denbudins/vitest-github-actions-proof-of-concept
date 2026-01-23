@@ -21,10 +21,8 @@ jobs:
 
       - name: Unit Tests
         run: pnpm run test
-        continue-on-error: true
 
       - name: Coverage Report
-        if: always()
         run: pnpm run coverage
 
       - name: Publish Vitest Results

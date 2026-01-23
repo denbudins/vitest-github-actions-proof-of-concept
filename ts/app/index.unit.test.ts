@@ -3,7 +3,7 @@ import { divTwoNumbers } from ".";
 
 describe("Div", () => {
   it("should divide two numbers correctly", () => {
-    const result = 9 / 3;
+    const result = 6 / 3;
     const sum = divTwoNumbers(6, 3);
     expect(sum).toBe(result);
   });

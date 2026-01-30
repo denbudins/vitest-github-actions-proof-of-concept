@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "private": true,
   "scripts": {
     "test": "vitest run --passWithNoTests",
     "coverage": "npm-run-all coverage:*",
@@ -20,7 +19,6 @@
     "prettier": "^3.8.1",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18",
-    "globals": "^13.24.0",
     "@eslint/js": "^9.0.0"
   }
 }

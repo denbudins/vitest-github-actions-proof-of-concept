@@ -21,7 +21,14 @@ jobs:
         run: pnpm install
 
       - name: Run ESLint and generate SARIF
-        run: pnpm exec eslint . --format node_modules/@microsoft/eslint-formatter-sarif/sarif.js --output-file results.sarif
+        run: |
+          pnpm exec eslint . --format node_modules/@microsoft/eslint-formatter-sarif/sarif.js --output-file results.sarif
+          pnpm exec eslint . --format=stylish > eslint-summary.txt
+
+      - name: Add ESLint summary to workflow
+        run: |
+          echo '## ESLint Results' >> $GITHUB_STEP_SUMMARY
+          cat eslint-summary.txt >> $GITHUB_STEP_SUMMARY
 
       - name: Upload SARIF file
         if: always()

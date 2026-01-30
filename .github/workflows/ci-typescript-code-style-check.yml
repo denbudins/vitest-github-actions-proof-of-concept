@@ -22,8 +22,8 @@ jobs:
 
       - name: Run ESLint and generate SARIF
         run: |
-          pnpm exec eslint . --format node_modules/@microsoft/eslint-formatter-sarif/sarif.js --output-file results.sarif || true
           pnpm exec eslint . --format=stylish > eslint-summary.txt || true
+          pnpm exec eslint . --format node_modules/@microsoft/eslint-formatter-sarif/sarif.js --output-file results.sarif
 
       - name: Add ESLint summary to workflow
         if: always()

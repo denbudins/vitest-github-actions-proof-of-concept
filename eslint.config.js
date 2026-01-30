@@ -18,5 +18,18 @@ export default [
       ...tsPlugin.configs.recommended.rules,
     },
   },
+  {
+    files: ["**/*.{js,mjs,cjs,ts}"],
+    languageOptions: {
+      parser: tsParser,
+      globals: { __dirname: "readonly" },
+    },
+    plugins: {
+      "@typescript-eslint": tsPlugin,
+    },
+    rules: {
+      ...tsPlugin.configs.recommended.rules,
+    },
+  },
   pluginJs.configs.recommended,
 ];

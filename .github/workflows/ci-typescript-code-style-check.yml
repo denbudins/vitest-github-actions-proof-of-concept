@@ -26,6 +26,7 @@ jobs:
           pnpm exec eslint . --format=stylish > eslint-summary.txt
 
       - name: Add ESLint summary to workflow
+        if: always()
         run: |
           echo '## ESLint Results' >> $GITHUB_STEP_SUMMARY
           cat eslint-summary.txt >> $GITHUB_STEP_SUMMARY

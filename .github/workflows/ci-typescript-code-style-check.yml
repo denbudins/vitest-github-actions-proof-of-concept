@@ -22,6 +22,5 @@ jobs:
       - name: Common setup And Code Style Check
         uses: intellegens-hr/actions/.github/actions/ts-ci@testing-branch
         with:
-          working-directory: ./ts
           version: '10'
           eslint-check-name: 'TypeScript ESLint Code Style Check'

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest run --passWithNoTests",
-    "coverage": "vitest run --passWithNoTests --reporter=junit --reporter=github-actions --outputFile=./test-results.xml"
+    "coverage": "vitest run --passWithNoTests --reporter=junit --reporter=github-actions --outputFile=./test-results.xml",
+    "build": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",

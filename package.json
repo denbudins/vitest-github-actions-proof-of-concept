@@ -7,7 +7,8 @@
     "test": "vitest run --passWithNoTests",
     "coverage": "npm-run-all coverage:*",
     "coverage:packages": "(cd ts/packages && pnpm run coverage)",
-    "coverage:app": "(cd ts/app && pnpm run coverage)"
+    "coverage:app": "(cd ts/app && pnpm run coverage)",
+    "build": "pnpm --filter ./ts/app... run build && pnpm --filter ./ts/packages... run build"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
